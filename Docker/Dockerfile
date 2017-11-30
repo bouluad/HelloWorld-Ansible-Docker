@@ -140,7 +140,7 @@ RUN set -e \
 		exit 1; \
 	fi
 
-ADD tomcat-users.xml /usr/local/tomcat/conf/
-COPY target/hello-world-war-1.0.0.war /usr/local/tomcat/webapps/
+ADD ../tomcat-users.xml /usr/local/tomcat/conf/
+COPY ../target/hello-world-war-1.0.0.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
